@@ -7,10 +7,10 @@ let getHomepage = (req, res) => {
     results.map((row) => {
       data.push({
         id: row.id,
-        name: row.name,
-        gender: row.gender,
         email: row.email,
         address: row.address,
+        firstName: row.name,
+        lastName: row.gender,
       });
     });
     return res.render("index.ejs", { dataUser: data });

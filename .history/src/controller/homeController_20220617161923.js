@@ -7,13 +7,13 @@ let getHomepage = (req, res) => {
     results.map((row) => {
       data.push({
         id: row.id,
-        name: row.name,
-        gender: row.gender,
         email: row.email,
         address: row.address,
+        firstName: row.firstName,
+        lastName: row.lastName,
       });
     });
-    return res.render("index.ejs", { dataUser: data });
+    return res.render("index.ejs", { dataUsers: data });
   });
 };
 module.exports = {
