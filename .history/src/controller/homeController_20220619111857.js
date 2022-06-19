@@ -13,10 +13,11 @@ let getDetailPage = async (req, res) => {
 };
 
 let createNewUser = async (req, res) => {
-  let { name, gender, email, address } = req.body;
+  let { firstName, lastName, email, address } = req.body;
+
   await pool.execute(
-    "insert into users(name, gender, email, address) values (?, ?, ?, ?)",
-    [name, gender, email, address]
+    "insert into users(firstName, lastName, email, address) values (?, ?, ?, ?)",
+    [firstName, lastName, email, address]
   );
 
   return res.redirect("/");

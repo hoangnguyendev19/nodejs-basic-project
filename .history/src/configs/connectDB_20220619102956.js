@@ -7,7 +7,7 @@ console.log("Creating connection pool...");
 const pool = mysql.createPool({
   host: "localhost",
   user: "root",
-  database: "basic_mysql_db",
+  database: "nodejsbasic",
 });
 
 export default pool;
