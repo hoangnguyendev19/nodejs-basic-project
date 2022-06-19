@@ -39,7 +39,7 @@ let postUpdateUser = async (req, res) => {
 
   await pool.execute(
     "update users set name= ?, gender = ? , email = ? , address= ? where id = ?",
-    [name, gender, email, address, id]
+    [naame, gender, email, address, id]
   );
 
   return res.redirect("/");
